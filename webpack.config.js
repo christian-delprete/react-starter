@@ -20,7 +20,11 @@ module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, './build')
+        path: path.resolve(__dirname, './build'),
+        publicPath: '/'
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     module: {rules},
     plugins: [
